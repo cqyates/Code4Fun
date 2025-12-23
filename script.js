@@ -17,10 +17,20 @@ const submitBtn = document.getElementById('add-task'); //works
 const listContainer = document.querySelector('.list-container');
 const taskList = document.getElementById('task-list');
 const taskArray = JSON.parse(localStorage.getItem('task-array')) || []; //works
+var clearList = document.createElement('i');
+clearList.setAttribute('class', 'bi bi-trash');
+clearList.setAttribute('id', 'delete-all');
+clearList.setAttribute('type', 'button');
 
+listContainer.append(clearList);
+clearList.addEventListener('click', function () {
+  localStorage.removeItem('task-array');
+  taskList.innerHTML =""
+});
 //works with correct array
 const setLocalStorage = (arr) => {
   localStorage.setItem('task-array', JSON.stringify(arr));
+  buildList();
 };
 const buildList = () => {
   listContainer.classList.remove('hide');
@@ -35,8 +45,9 @@ const buildList = () => {
 submitBtn.addEventListener('click', function () {
   var taskName = this.previousElementSibling.value;
   taskArray.push(taskName);
+  document.getElementById("task-name").value = ""
   setLocalStorage(taskArray);
-  buildList();
+  return;
 });
 
 // var taskList = document.getElementById("task-list");
