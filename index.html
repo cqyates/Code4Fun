@@ -1,62 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Coding is Fun</title>
+  </head>
 
-  <link rel="stylesheet" href="styles.css" />
-  <title>Coding is Fun</title>
-</head>
-
-<body style="background-color: rgb(7, 12, 12); height: 100vh">
-  <div class="container" style="
+  <body style="background-color: rgb(7, 12, 12); height: 100vh">
+    <div
+      class="container"
+      style="
         border: 2px solid white;
         padding: 1em;
         border-radius: 10px;
         margin-top: 1rem;
-      ">
-    <header class="header" style="display: flex; flex-direction: column">
-      <h1 class="text-success" id="title">Coding is Fun</h1>
-      <h2>I Can Do Hard Things!</h2>
+      "
+    >
+      <header class="header" style="display: flex; flex-direction: column">
+        <h1 class="text-success" id="title">Coding is Fun</h1>
+        <h2>I Can Do Hard Things!</h2>
+      </header>
+      <main class="section">
+        <section
+          style="
+            border: 2px solid white;
+            padding: 1em;
+            border-radius: 10px;
+            margin-top: 1rem;
+          "
+        >
+          >
+          <h3>I Can Make a Button Click and Change the CSS</h3>
+          <button
+            class="btn btn-success"
+            id="color-changer"
+            style="width: 150px; margin: 0 auto"
+          >
+            Click Me
+          </button>
+        </section>
+        <section
+          style="
+            border: 2px solid white;
+            padding: 1em;
+            border-radius: 10px;
+            margin-top: 1rem;
+          "
+        >
+          >
+          <h3>I Can Add Icons</h3>
+          <i
+            class="bi bi-suit-heart-fill"
+            style="font-size: 2rem; color: red"
+          ></i>
+        </section>
+        <section
+          style="
+            border: 2px solid white;
+            padding: 1em;
+            border-radius: 10px;
+            margin-top: 1rem;
+          "
+        >
+          >
+          <h3>I Can Use Local Storage to Make a To Do List</h3>
+          <input type="text" name="task-name" id="task-name" required />
+          <i
+            type="button"
+            class="btn bi bi-arrow-up-right-square-fill"
+            id="add-task"
+            style="font-size: 1.5rem; color: white"
+          ></i>
 
-    </header>
-    <main class="section">
-      <section style="border: 2px solid white;
-        padding: 1em;
-        border-radius: 10px;
-        margin-top: 1rem;">>
-        <h3>I Can Make a Button Click and Change the CSS</h3>
-        <button class="btn btn-success" id="color-changer" style="width: 150px; margin: 0 auto">
-          Click Me
-        </button>
-      </section>
-      <section style="border: 2px solid white;
-          padding: 1em;
-          border-radius: 10px;
-          margin-top: 1rem;">>
-        <h3>I Can Add Icons</h3>
-        <i class="bi bi-suit-heart-fill" style="font-size: 2rem; color: red;"></i>
-      </section>
-      <section style="border: 2px solid white;
-        padding: 1em;
-        border-radius: 10px;
-        margin-top: 1rem;">>
-        <h3>I Can Take in Information with an Input</h3>
-        <form id="get-name">
-          <input type="text" name="name" id="username">
-          <i class="btn bi bi-arrow-up-right-square-fill" style="font-size: 1.5rem; color: white"></i>
-      </section>
-    </main>
-  </div>
-  <script src="./script.js"></script>
-</body>
-
+          <div class="list-container hide">
+            <h4 id="to-do">To Do List</h4>
+            <ol id="task-list"></ol>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="./script.js"></script>
+  </body>
 </html>
