@@ -11,10 +11,13 @@
   color: black;
   cursor: pointer;
 }
-.completed {
-  text-decoration: line-through; /* */
+/* .completed {
+  text-decoration: line-through; 
   cursor: pointer;
-}
+} */
 #delete-all {
   font-size: 2.5em;
+}
+[data-status="complete"] {
+  text-decoration: line-through;
 }
