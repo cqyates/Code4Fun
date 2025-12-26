@@ -1,3 +1,6 @@
+//need to decide what API call to use and what information to display 
+// code logic is perfect
+
 const apiKey = "45ebbd33aab5c77a18994061b0a6ee6a"
 
 const searchBtn = document.getElementById("city-search")
