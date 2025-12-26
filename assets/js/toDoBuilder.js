@@ -69,3 +69,4 @@ submitBtn.addEventListener('click', function () {
   //upcoming problem.  I don't think you can update a specific key/value pair in LS.
   // would need to "write over" the list and if I go that direction I have to make sure that the old status persists through rewrites
 });
+buildList()
