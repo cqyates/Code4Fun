@@ -8,20 +8,17 @@ const submitBtn = document.getElementById('add-task');
 const listContainer = document.querySelector('.list-container');
 const taskList = document.getElementById('task-list');
 
-// on submit button click, fire a function that creates and object with the task name and the status which defaults to "to-do"
-// save that object to the taskList array and save to localstorage.
+var clearList = document.createElement('i');
+clearList.setAttribute('class', 'bi bi-trash');
+clearList.setAttribute('id', 'delete-all');
+clearList.setAttribute('type', 'button');
 
-// var clearList = document.createElement('i');
-// clearList.setAttribute('class', 'bi bi-trash');
-// clearList.setAttribute('id', 'delete-all');
-// clearList.setAttribute('type', 'button');
+listContainer.append(clearList);
+clearList.addEventListener('click', function () {
+  localStorage.removeItem('task-array');
+  taskList.innerHTML = '';
 
-// listContainer.append(clearList);
-// clearList.addEventListener('click', function () {
-//   localStorage.removeItem('task-array');
-//   taskList.innerHTML = '';
-
-// });
+});
 
 // const setLocalStorage = (arr) => {
 //   localStorage.setItem('task-array', JSON.stringify(arr));
@@ -66,7 +63,5 @@ submitBtn.addEventListener('click', function () {
   taskArray.push(task);
   localStorage.setItem('task-array', JSON.stringify(taskArray));
   buildList();
-  //upcoming problem.  I don't think you can update a specific key/value pair in LS.
-  // would need to "write over" the list and if I go that direction I have to make sure that the old status persists through rewrites
 });
 buildList()
