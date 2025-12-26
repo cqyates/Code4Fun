@@ -32,31 +32,34 @@ const getOldTasks = () => {
   return JSON.parse(localStorage.getItem('task-array')) || [];
 };
 const buildList = () => {
+  taskList.innerHTML = "";
   const listArray = getOldTasks();
-  listArray.forEach(({ name, status }) => {
+  listArray.forEach(({ name, taskStatus }) => {
     var liEl = document.createElement('li');
     liEl.textContent = name;
-    if (status === 'completed') {
-      liEl.style.textDecoration = 'line-through';
-    }
-    liEl.setAttribute("class", "todo-item")
+    liEl.setAttribute('value', name);
+    liEl.setAttribute('data-status', taskStatus);
+    liEl.addEventListener('click', function (evt) {
+      const clickedTask = evt.target.innerText;
+      changeStatus(clickedTask);
+    });
+
+    liEl.setAttribute('class', 'todo-item');
     taskList.append(liEl);
   });
 };
-const changeStatus = () => {
-  const oldTaskArray = getOldTasks()
-  console.log(oldTaskArray);
-  // tasks:
-  // get Old Array.  
-  //Get value of li with this click
-  //use a filter method to find the correct line to change to completed
-  //save new list to localstorage.
-}
+const changeStatus = (taskToChange) => {
+  const taskArray = getOldTasks();
+  const completedTask = taskArray.find((task) => task.name === taskToChange);
+  completedTask.taskStatus = 'completed';
+  localStorage.setItem("task-array", JSON.stringify(taskArray));
+  buildList();
+};
 submitBtn.addEventListener('click', function () {
   var taskName = this.previousElementSibling.value;
   var task = {
     name: taskName,
-    status: 'to-do',
+    taskStatus: 'to-do',
   };
   document.getElementById('task-name').value = '';
   const taskArray = getOldTasks();

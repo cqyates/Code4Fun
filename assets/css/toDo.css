@@ -18,6 +18,6 @@
 #delete-all {
   font-size: 2.5em;
 }
-[data-status="complete"] {
+[data-status="completed"] {
   text-decoration: line-through;
 }
