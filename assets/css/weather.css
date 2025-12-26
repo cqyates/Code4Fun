@@ -1,0 +1,16 @@
+.weather-container {
+  background-color: white;
+  width: 30vw;
+  border: 1px solid black;
+  margin: 0 auto; 
+  border-radius: 10px;
+  padding: 1em;
+  margin-top: 1rem;
+}
+.hide {
+  display: none
+}
+.weather-item {
+  color: black;
+  list-style-type: none;
+}

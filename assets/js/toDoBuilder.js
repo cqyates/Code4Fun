@@ -20,10 +20,6 @@ clearList.addEventListener('click', function () {
 
 });
 
-// const setLocalStorage = (arr) => {
-//   localStorage.setItem('task-array', JSON.stringify(arr));
-
-// };
 
 const getOldTasks = () => {
   return JSON.parse(localStorage.getItem('task-array')) || [];
