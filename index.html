@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="stylesheet" href="./assets/css/toDo.css" />
     <link rel="stylesheet" href="./assets/css/weather.css" />
+    <link rel="stylesheet" href="./assets/css/socials.css" />
     <title>Coding is Fun</title>
   </head>
 
@@ -41,6 +42,7 @@
         <h2>I Can Do Hard Things!</h2>
       </header>
       <main class="section">
+        <!--Changing CSS.  Finished-->
         <section
           style="
             border: 2px solid white;
@@ -59,6 +61,7 @@
             Click Me
           </button>
         </section>
+        <!--Heart Icons-->
         <section
           style="
             border: 2px solid white;
@@ -68,11 +71,46 @@
           "
         >
           >
-          <h3>I Can Add Icons</h3>
-          <i
-            class="bi bi-suit-heart-fill"
-            style="font-size: 2rem; color: red"
-          ></i>
+          <div id="icon-section">
+            <i
+              class="bi bi-suit-heart-fill"
+              style="font-size: 2rem; color: red"
+            ></i>
+            <h3>I Can Add Icons</h3>
+            <i
+              class="bi bi-suit-heart-fill"
+              style="font-size: 2rem; color: red"
+            ></i>
+          </div>
+          <div id="my-socials">
+            <ul>
+              <li>
+                <i
+                  class="bi bi-github"
+                  style="color: white; font-size: 2rem"
+                ></i>
+              </li>
+              <li>
+                <i
+                  class="bi bi-facebook"
+                  style="color: white; font-size: 2rem"
+                ></i>
+              </li>
+              <li>
+                <i
+                  class="bi bi-envelope-fill"
+                  style="color: white; font-size: 2rem"
+                ></i>
+              </li>
+              <li>
+                <i
+                class="bi bi-linkedin"
+                style="color: white; font-size: 2rem"
+              ></i>
+            </li>
+              </li>
+            </ul>
+          </div>
         </section>
         <section
           style="
@@ -114,7 +152,12 @@
           <h3>I Can Make a Weather Widget with Open Weather's Api</h3>
           <div>
             <input type="text" name="city" id="city-name" value="enter city" />
-            <i type="button" class="btn bi bi-search" style="font-size: 1.5rem; color: white" id="city-search"></i>
+            <i
+              type="button"
+              class="btn bi bi-search"
+              style="font-size: 1.5rem; color: white"
+              id="city-search"
+            ></i>
           </div>
           <div class="weather-container hide">
             <h4 id="current-city"></h4>
@@ -122,45 +165,49 @@
           </div>
         </section>
         <section
-        style="
-          border: 2px solid white;
-          padding: 1em;
-          border-radius: 10px;
-          margin-top: 1rem;
-        "
-      >
-        <h3>I Can Make Gorgeous Image Carosels</h3>
-      </section>
-      <section
-      style="
-        border: 2px solid white;
-        padding: 1em;
-        border-radius: 10px;
-        margin-top: 1rem;
-      "
-    >
-      <h3>I Can Use Pagination to Organize Many Images from an Image API</h3>
-    </section>
-    <section
-    style="
-      border: 2px solid white;
-      padding: 1em;
-      border-radius: 10px;
-      margin-top: 1rem;
-    "
-  >
-    <h3>I Can Send a Search Term to Youtube and Display the Results</h3>
-  </section>
-  <section
-  style="
-    border: 2px solid white;
-    padding: 1em;
-    border-radius: 10px;
-    margin-top: 1rem;
-  "
->
-  <h3>I Can Connect Google Sheets to Save Information without a BackEnd</h3>
-</section>
+          style="
+            border: 2px solid white;
+            padding: 1em;
+            border-radius: 10px;
+            margin-top: 1rem;
+          "
+        >
+          <h3>I Can Make Gorgeous Image Carosels</h3>
+        </section>
+        <section
+          style="
+            border: 2px solid white;
+            padding: 1em;
+            border-radius: 10px;
+            margin-top: 1rem;
+          "
+        >
+          <h3>
+            I Can Use Pagination to Organize Many Images from an Image API
+          </h3>
+        </section>
+        <section
+          style="
+            border: 2px solid white;
+            padding: 1em;
+            border-radius: 10px;
+            margin-top: 1rem;
+          "
+        >
+          <h3>I Can Send a Search Term to Youtube and Display the Results</h3>
+        </section>
+        <section
+          style="
+            border: 2px solid white;
+            padding: 1em;
+            border-radius: 10px;
+            margin-top: 1rem;
+          "
+        >
+          <h3>
+            I Can Connect Google Sheets to Save Information without a BackEnd
+          </h3>
+        </section>
       </main>
     </div>
     <script src="./assets/js/colorChanger.js"></script>

@@ -1,0 +1,14 @@
+#icon-section {
+  display: flex;
+}
+#icon-section i {
+  margin-inline: 1rem;
+}
+#my-socials ul {
+  display: flex;
+  flex-direction: row-reverse;
+  list-style: none;
+}
+#my-socials ul li {
+  margin: 1rem;
+}
